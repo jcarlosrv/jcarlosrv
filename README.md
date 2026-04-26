@@ -16,6 +16,14 @@ PhD in theoretical physics (quantum gravity). Peer-reviewed publications in *Phy
 
 Part-Time Professor at **Tecnológico de Monterrey** — Calculus, Linear Algebra, Statistics, and Data Science.
 
+## Featured project
+
+### [Photometric Redshift Regression](https://github.com/jcarlosrv/photo-z-regression)
+XGBoost model that predicts galaxy redshifts from SDSS photometric magnitudes.
+Replicates the core photo-z ML pipeline used in modern sky surveys.
+
+**Live demo:** [photo-z-regression.streamlit.app](https://photo-z-regression.streamlit.app/)
+
 ## Selected publications
 
 - [Effective loop quantum geometry of Schwarzschild interior](https://doi.org/10.1103/PhysRevD.95.064041) — *Physical Review D*, 2017

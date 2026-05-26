@@ -10,7 +10,7 @@ the two things modern data work actually demands: mathematical rigor under uncer
 
 ## What I work on
 
-- **Modeling** — scikit-learn, XGBoost, TensorFlow. Forecasting, classification, spend analytics.
+- **Modeling** — scikit-learn, XGBoost, LightGBM, TensorFlow. Forecasting, classification, spend analytics.
 - **LLM applications** — Claude API, LangChain, RAG pipelines, vector search (ChromaDB), evaluation harnesses.
 - **Data engineering** — Python, SQL (PostgreSQL), MongoDB, REST APIs, ETL/ELT on Azure and GCP.
 - **Analytics delivery** — Power BI (DAX, Microsoft Fabric, Power Query/M), Streamlit, Plotly.
@@ -34,6 +34,11 @@ Replicates the core photo-z ML pipeline used in modern sky surveys.
 
 **Live demo:** [photo-z-regression.streamlit.app](https://photo-z-regression.streamlit.app/)
 
+### [Energy Demand Forecasting](https://github.com/jcarlosrv/energy-demand-forecasting)
+Hourly electricity load forecasting for Germany. LightGBM with lag, calendar, and weather features beats Prophet and a seasonal-naive baseline by ~6× on
+MAE (447 MW vs 2,558–2,950 MW, MAPE 0.82%) on a held-out 2019 test set. End-to-end pipeline: OPSD + Open-Meteo ingestion → feature engineering → modeling
+→ residual diagnostics → 7-day recursive forward forecast.
+
 ## Selected publications
 
 - [Effective loop quantum geometry of Schwarzschild interior](https://doi.org/10.1103/PhysRevD.95.064041) — *Physical Review D*, 2017
@@ -45,5 +50,3 @@ Physics*, 2021
 
 - LinkedIn — [linkedin.com/in/juan-ruelas](https://www.linkedin.com/in/juan-ruelas/)
 - Email — j.carlos.ruelas.v@gmail.com
-
-Open to select freelance projects and the right full-time opportunity.

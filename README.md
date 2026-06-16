@@ -12,7 +12,7 @@ the two things modern data work actually demands: mathematical rigor under uncer
 
 - **Modeling** — scikit-learn, XGBoost, LightGBM, TensorFlow. Forecasting, classification, spend analytics.
 - **LLM applications** — Claude API, LangChain, RAG pipelines, vector search (ChromaDB), evaluation harnesses.
-- **Data engineering** — Python, SQL (PostgreSQL), MongoDB, REST APIs, ETL/ELT on Azure and GCP.
+- **Data engineering** — Python, SQL (PostgreSQL), MongoDB, REST APIs,  dbt (analytics engineering), ETL/ELT on Azure and GCP.
 - **Analytics delivery** — Power BI (DAX, Microsoft Fabric, Power Query/M), Streamlit, Plotly.
 
 ## Teaching
@@ -30,7 +30,7 @@ Ships with a reproducible eval harness measuring in-corpus accuracy, adversarial
 
 ### [Photometric Redshift Regression](https://github.com/jcarlosrv/photo-z-regression)
 XGBoost model that predicts galaxy redshifts from SDSS photometric magnitudes.
-Replicates the core photo-z ML pipeline used in modern sky surveys.
+Replicates the core photo-z ML pipeline used in modern sky surveys. See the Photo-z Serving API for the production REST endpoint.
 
 **Live demo:** [photo-z-regression.streamlit.app](https://photo-z-regression.streamlit.app/)
 
@@ -38,6 +38,18 @@ Replicates the core photo-z ML pipeline used in modern sky surveys.
 Hourly electricity load forecasting for Germany. LightGBM with lag, calendar, and weather features beats Prophet and a seasonal-naive baseline by ~6× on
 MAE (447 MW vs 2,558–2,950 MW, MAPE 0.82%) on a held-out 2019 test set. End-to-end pipeline: OPSD + Open-Meteo ingestion → feature engineering → modeling
 → residual diagnostics → 7-day recursive forward forecast.
+
+### [dbt USASpending Analytics](https://github.com/jcarlosrv/dbt-usaspending-analytics)
+Analytics-engineering pipeline over US federal spending data — dbt Core + DuckDB.
+Modeled staging → intermediate → marts (Medallion) with surrogate keys, a fiscal-year
+macro, and 25 passing data tests, plus a documented lineage graph.
+
+### [Photo-z Serving API](https://github.com/jcarlosrv/photo-z-api)
+Production REST serving for the photo-z model — a typed FastAPI endpoint serving an
+XGBoost redshift regressor, with Pydantic v2 validation, batch predictions, Docker
+packaging, and auto-generated OpenAPI/Swagger docs.
+
+**Live demo:** [photo-z-api.onrender.com/docs](https://photo-z-api.onrender.com/docs)
 
 ## Selected publications
 
